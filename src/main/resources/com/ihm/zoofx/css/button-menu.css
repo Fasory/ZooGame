@@ -1,0 +1,19 @@
+.button {
+    -fx-background-color: transparent;
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 50;
+    -fx-text-fill: rgb(146,208,80); /* orange : 255,156,47    vert : 146,208,80*/
+}
+
+.text {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+.button:hover {
+    -fx-text-fill: rgb(255,200,0); /* orange : 255,156,47    vert : 146,208,80*/
+}
+
+.button:armed {
+    -fx-text-fill: rgb(255,156,47);
+}
