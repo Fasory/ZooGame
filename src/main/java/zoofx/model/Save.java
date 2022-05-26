@@ -1,4 +1,4 @@
-package zoofx;
+package zoofx.model;
 
 public class Save {
 }

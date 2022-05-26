@@ -10,6 +10,43 @@
     -fx-stroke-width: 1;
 }
 
+.toggle-button {
+    -fx-background-color: rgb(112,51,4);
+    -fx-background-radius: 25px;
+    -fx-border-radius: 22px;
+    -fx-border-color: rgb(242,171,65);
+    -fx-border-width: 5px;
+}
+
+.toggle-button .separator *.line {
+    -fx-border-width: 3 0 0 0; /* its make really one-pixel-border */
+    -fx-border-color: rgb(242,171,65);
+}
+
+.toggle-button .label {
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 30;
+    -fx-text-fill: rgb(242,171,65);
+    -fx-padding: 20 100 20 100;
+}
+
+.toggle-button:selected {
+    -fx-border-color: rgb(146,208,80);
+    -fx-background-color: rgb(117,56,9);
+}
+
+.toggle-button:selected .separator *.line {
+    -fx-border-color: rgb(146,208,80);
+}
+
+.toggle-button:selected .label {
+    -fx-text-fill: rgb(146,208,80);
+}
+
+.toggle-button:selected .separator *.line {
+    -fx-text-fill: rgb(146,208,80);
+}
+
 .button {
     -fx-background-color: rgb(112,51,4);
     -fx-background-radius: 25px;

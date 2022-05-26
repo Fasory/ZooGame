@@ -86,6 +86,6 @@ public class CreateGameController extends AbstractController {
 
     @FXML
     public void onStartClick() throws IOException {
-        ZooGame.loadViewWithRollback(1, "layouts/game.fxml", stage);
+        ZooGame.loadViewWithRollback(1, "layouts/game-view.fxml", stage);
     }
 }

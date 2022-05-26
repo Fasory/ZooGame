@@ -13,6 +13,7 @@ import zoofx.AbstractController;
 import zoofx.ZooGame;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 
 public class OptionController extends AbstractController {
 
@@ -23,17 +24,37 @@ public class OptionController extends AbstractController {
     private ImageView imgBack;
 
     @FXML
+    private ImageView imgBackToMenu;
+
+    @FXML
+    private ImageView imgSave;
+
+    @FXML
     private ChoiceBox cbResolution;
 
     @FXML
-    private VBox boxBack;
+    private HBox boxCompile;
+
+    @FXML
+    private VBox mainBox;
+
+    @FXML
+    private StackPane paneSave;
+
+    @FXML
+    private StackPane paneBackToMenu;
 
     public void initialize() {
         try {
             imgBackground.setImage(ZooGame.BACKGROUND);
             imgBackground.setEffect(new GaussianBlur(15));
             imgBack.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,142,219,85));
-            ((StackPane)boxBack.getParent()).setAlignment(boxBack, Pos.BOTTOM_CENTER);
+            imgSave.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,142,219,85));
+            imgSave.setRotate(180);
+            imgBackToMenu.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,142,219,85));
+            imgBackToMenu.setScaleX(-1);
+            ((StackPane)boxCompile.getParent()).setAlignment(boxCompile, Pos.BOTTOM_CENTER);
+            ((StackPane)mainBox.getParent()).setAlignment(mainBox, Pos.CENTER);
             cbResolution.setBackground(new Background(new BackgroundImage(ImageTools.getSubImage(ZooGame.SIGN, 41,33,220,91), BackgroundRepeat.NO_REPEAT,
                     BackgroundRepeat.NO_REPEAT,
                     BackgroundPosition.CENTER,
@@ -46,5 +67,23 @@ public class OptionController extends AbstractController {
     @FXML
     public void onBackClick() {
         ZooGame.loadLastView(stage);
+    }
+
+    @FXML
+    public void onBackToMenuClick() {
+        ZooGame.loadOldView(2, stage);
+    }
+
+    @FXML
+    public void onSaveClick() throws IOException {
+        ZooGame.loadView("layouts/save-view.fxml", stage);
+    }
+
+    @FXML
+    public void modeInGame() {
+        paneSave.setManaged(true);
+        paneBackToMenu.setManaged(true);
+        paneSave.setVisible(true);
+        paneBackToMenu.setVisible(true);
     }
 }
