@@ -8,6 +8,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="zoofx.createGameMenu.CreateGameController"
@@ -20,33 +21,57 @@
         <Label fx:id="title" text="NOUVELLE PARTIE"/>
     </VBox>
     <VBox fx:id="mainBox" alignment="CENTER" stylesheets="@../css/create-game-menu.css"
-          maxWidth="-Infinity" maxHeight="-Infinity" spacing="20">
+          maxWidth="-Infinity" maxHeight="-Infinity" spacing="80">
         <padding>
-            <Insets top="30" right="30" bottom="30" left="30"/>
+            <Insets top="50" right="50" bottom="50" left="50"/>
         </padding>
-        <HBox>
-            <Label text="NOM DU ZOO :"/>
-            <TextField/>
-        </HBox>
-        <HBox>
-            <Label text="DIFFICULTE :"/>
-        </HBox>
+        <GridPane alignment="CENTER" hgap="30" vgap="30">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER"/>
+            </columnConstraints>
+            <Label text="NOM DU ZOO" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtfName" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="ENTREZ UN NOM..."
+                       focusTraversable="false"/>
+            <Label text="DIFFICULTE" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <ChoiceBox value="NORMAL" fx:id="cbDifficulty" prefWidth="${txtfName.width}"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1" focusTraversable="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="FACILE"/>
+                        <String fx:value="NORMAL"/>
+                        <String fx:value="DIFFICILE"/>
+                        <String fx:value="EXTREME"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+        </GridPane>
+
         <HBox spacing="100">
-            <CheckBox text="TURORIEL" selected="true"/>
-            <CheckBox text="MODE BAC A SABLE"/>
+            <CheckBox text="TURORIEL" selected="true" focusTraversable="false"/>
+            <CheckBox text="MODE BAC A SABLE" focusTraversable="false"/>
         </HBox>
     </VBox>
-    <VBox fx:id="boxBack" maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}">
+    <HBox fx:id="compileBox" maxWidth="-Infinity" maxHeight="-Infinity" alignment="CENTER" spacing="100">
         <padding>
             <Insets bottom="50"/>
         </padding>
-        <StackPane maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}"
-                   stylesheets="@../css/button-menu.css">
-            <ImageView fx:id="imgBack" cache="true" smooth="true" preserveRatio="true" fitWidth="350"/>
-            <Button fx:id="btnBack" text="Retour" prefWidth="Infinity" prefHeight="Infinity"
-                    onAction="#onBackClick"/>
-        </StackPane>
-    </VBox>
+        <VBox>
+            <StackPane maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}"
+                       stylesheets="@../css/button-menu.css">
+                <ImageView fx:id="imgBack" cache="true" smooth="true" preserveRatio="true" fitWidth="350"/>
+                <Button fx:id="btnBack" text="Retour" prefWidth="Infinity" prefHeight="Infinity"
+                        onAction="#onBackClick"/>
+            </StackPane>
+        </VBox>
+        <VBox>
+            <StackPane maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}"
+                       stylesheets="@../css/button-menu.css">
+                <ImageView fx:id="imgStart" cache="true" smooth="true" preserveRatio="true" fitWidth="350"/>
+                <Button fx:id="btnStart" text="Commencer" prefWidth="Infinity" prefHeight="Infinity"
+                        onAction="#onStartClick" disable="true"/>
+            </StackPane>
+        </VBox>
+    </HBox>
     <StackPane maxWidth="${imgBackgroundOption.fitWidth}" maxHeight="${imgBackgroundOption.fitHeight}"
                stylesheets="@../css/button-menu.css">
         <ImageView fx:id="imgBackgroundOption" preserveRatio="true" fitWidth="100"/>

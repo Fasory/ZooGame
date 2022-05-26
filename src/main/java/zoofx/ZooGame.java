@@ -54,6 +54,12 @@ public class ZooGame extends Application {
         stage.setScene(stackScene.peek());
     }
 
+    public static void loadViewWithRollback(int rollback, String path, Stage stage) throws IOException {
+        for (int i = 0; i < rollback; i++)
+            stackScene.pop();
+        loadView(path, stage);
+    }
+
     public static Save getSave(int n) {
         return list_save.get(n);
     }

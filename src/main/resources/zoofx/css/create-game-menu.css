@@ -1,8 +1,39 @@
+#mainBox .choice-box .context-menu {
+    -fx-background-color: rgb(250,250,250);
+    -fx-border-width: 2px;
+    -fx-border-color: rgb(146,208,80);
+    -fx-padding: 0;
+}
+
+#mainBox .choice-box .menu-item:focused {
+    -fx-background-color: rgb(146,208,80);
+}
+
+#mainBox .choice-box .menu-item > .label {
+    -fx-text-fill: rgb(146,208,80);
+}
+
+#mainBox .choice-box .menu-item:focused > .label {
+    -fx-text-fill: white;
+}
+
+#mainBox .choice-box .label {
+    -fx-text-fill: rgb(146,208,80);
+}
+
+#mainBox .choice-box {
+    -fx-background-color: white;
+    -fx-mark-color: rgb(146,208,80); /* bois clair */
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 30;
+}
+
 #mainBox .text-field {
     -fx-background-color: white;
     -fx-font-family: "Tytoon Mist";
     -fx-font-size: 30;
-    -fx-text-fill: rgb(242,171,65);
+    -fx-text-fill: rgb(146,208,80);
+    -fx-alignment: center;
 }
 
 #mainBox {
@@ -26,10 +57,7 @@
 }
 
 #mainBox .check-box .box {
-    -fx-background-color: rgb(112,51,4);
-    -fx-border-color: rgb(242,171,65);
-    -fx-border-radius: 3px;
-    -fx-border-width: 2px;
+    -fx-background-color: white;
 
 }
 
@@ -38,9 +66,19 @@
 }
 
 #mainBox .check-box:selected .mark {
-    -fx-background-color: rgb(112,51,4);
+    -fx-background-color: white;
 }
 
 #mainBox .check-box:selected .box {
-    -fx-background-color: rgb(242,171,65);
+    -fx-background-color: rgb(146,208,80);
+}
+
+#mainBox .check-box:hover .mark {
+    -fx-background-color: white;
+    -fx-opacity: 0.5;
+}
+
+#mainBox .check-box:hover .box {
+    -fx-background-color: rgb(146,208,80);
+    -fx-opacity: 0.5;
 }

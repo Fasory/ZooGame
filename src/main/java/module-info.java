@@ -10,8 +10,10 @@ module com.ihm.zoofx {
     exports zoofx.optionMenu;
     exports zoofx.loadGameMenu;
     exports zoofx.createGameMenu;
+    exports zoofx.gameUI;
     opens zoofx.mainMenu to javafx.fxml;
     opens zoofx.optionMenu to javafx.fxml;
     opens zoofx.loadGameMenu to javafx.fxml;
     opens zoofx.createGameMenu to javafx.fxml;
+    opens zoofx.gameUI to javafx.fxml;
 }

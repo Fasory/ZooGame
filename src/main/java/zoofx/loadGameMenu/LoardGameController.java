@@ -46,7 +46,7 @@ public class LoardGameController extends AbstractController {
             imgBackground.setEffect(new GaussianBlur(15));
             imgBackgroundOption.setImage(ImageTools.getSubImage(ZooGame.SIGN, 310,288,100,70));
             imgBackgroundOption.setRotate(180);
-            imgBack.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,33,220,91));
+            imgBack.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,142,219,85));
             ((StackPane)boxBack.getParent()).setAlignment(boxBack, Pos.BOTTOM_CENTER);
             if (ZooGame.getSave(0) == null) save1.setDisable(true);
             if (ZooGame.getSave(1) == null) save2.setDisable(true);

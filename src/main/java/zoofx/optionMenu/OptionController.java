@@ -32,7 +32,7 @@ public class OptionController extends AbstractController {
         try {
             imgBackground.setImage(ZooGame.BACKGROUND);
             imgBackground.setEffect(new GaussianBlur(15));
-            imgBack.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,33,220,91));
+            imgBack.setImage(ImageTools.getSubImage(ZooGame.SIGN, 41,142,219,85));
             ((StackPane)boxBack.getParent()).setAlignment(boxBack, Pos.BOTTOM_CENTER);
             cbResolution.setBackground(new Background(new BackgroundImage(ImageTools.getSubImage(ZooGame.SIGN, 41,33,220,91), BackgroundRepeat.NO_REPEAT,
                     BackgroundRepeat.NO_REPEAT,
