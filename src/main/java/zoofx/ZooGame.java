@@ -19,6 +19,7 @@ public class ZooGame extends Application {
     public final static Image BACKGROUND = new Image(String.valueOf(ZooGame.class.getResource("img/background.jpg")));
     public final static Image TITLE = new Image(String.valueOf(ZooGame.class.getResource("img/title-screen.png")));
     public final static Image SIGN = new Image(String.valueOf(ZooGame.class.getResource("img/background-sign.png")));
+    public final static Image LONGSIGN = new Image(String.valueOf(ZooGame.class.getResource("img/long-background-sign.png")));
     private static Stack<FullScene> stackScene = new Stack<>();
     public final static int MAX_SAVE = 4;
     private static ArrayList<Save> list_save = new ArrayList<>(MAX_SAVE);

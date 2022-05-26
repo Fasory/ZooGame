@@ -1,3 +1,132 @@
 #backgroundGame {
     -fx-background-color: black;
 }
+
+.tooltip {
+    -fx-font-size: 20;
+    -fx-spacing: 10;
+    -fx-text-fill: rgb(255,255,255);
+    -fx-font-family: "Tytoon Mist";
+}
+
+#imgVisitor {
+    -fx-image: url('../img/icone/people-green.png');
+}
+
+#boxTopInfo #lbTime {
+    -fx-background-color: transparent;
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 25;
+    -fx-text-fill: rgb(112,51,4);
+    -fx-padding: 10 50 10 50;
+}
+
+#boxTopInfo #descInfo .label {
+    -fx-background-color: rgb(112,51,4);
+    -fx-background-radius: 100px;
+    -fx-text-fill: rgb(146,208,80);
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 25;
+    -fx-padding: 10 50 10 50;
+}
+
+#boxBottomButton .button {
+    -fx-background-color: rgb(112,51,4);
+    -fx-background-radius: 100px;
+}
+
+#boxBottomButton .button:hover {
+    -fx-border-radius: 100px;
+    -fx-border-width: 2px;
+    -fx-border-color: rgb(255,200,0);
+}
+
+#boxBottomButton .button:armed {
+    -fx-border-radius: 100px;
+    -fx-border-width: 2px;
+    -fx-border-color: rgb(255,156,47);
+}
+
+.button #imgEscavator {
+    -fx-image: url('../img/icone/escavator-green.png');
+}
+
+.button:hover #imgEscavator {
+    -fx-image: url('../img/icone/escavator-yellow.png');
+}
+
+.button:armed #imgEscavator {
+    -fx-image: url('../img/icone/escavator-orange.png');
+}
+
+.button #imgRoad {
+    -fx-image: url('../img/icone/road-green.png');
+}
+
+.button:hover #imgRoad {
+    -fx-image: url('../img/icone/road-yellow.png');
+}
+
+.button:armed #imgRoad {
+    -fx-image: url('../img/icone/road-orange.png');
+}
+
+.button #imgAnimals {
+    -fx-image: url('../img/icone/animals-green.png');
+}
+
+.button:hover #imgAnimals {
+    -fx-image: url('../img/icone/animals-yellow.png');
+}
+
+.button:armed #imgAnimals {
+    -fx-image: url('../img/icone/animals-orange.png');
+}
+
+.button #imgFlash {
+    -fx-image: url('../img/icone/flash-green.png');
+}
+
+.button:hover #imgFlash {
+    -fx-image: url('../img/icone/flash-yellow.png');
+}
+
+.button:armed #imgFlash {
+    -fx-image: url('../img/icone/flash-orange.png');
+}
+
+.button #imgWater {
+    -fx-image: url('../img/icone/water-green.png');
+}
+
+.button:hover #imgWater {
+    -fx-image: url('../img/icone/water-yellow.png');
+}
+
+.button:armed #imgWater {
+    -fx-image: url('../img/icone/water-orange.png');
+}
+
+.button #imgBuild {
+    -fx-image: url('../img/icone/build-green.png');
+}
+
+.button:hover #imgBuild {
+    -fx-image: url('../img/icone/build-yellow.png');
+}
+
+.button:armed #imgBuild {
+    -fx-image: url('../img/icone/build-orange.png');
+}
+
+.button #imgTree {
+    -fx-image: url('../img/icone/tree-green.png');
+}
+
+.button:hover #imgTree {
+    -fx-image: url('../img/icone/tree-yellow.png');
+}
+
+.button:armed #imgTree {
+    -fx-image: url('../img/icone/tree-orange.png');
+}

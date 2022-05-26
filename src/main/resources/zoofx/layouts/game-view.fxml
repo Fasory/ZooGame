@@ -15,6 +15,127 @@
            fx:id="backgroundGame"
            stylesheets="@../css/game-ui.css">
 
+    <StackPane fx:id="boxTopInfo" maxWidth="-Infinity" maxHeight="-Infinity"
+               stylesheets="@../css/game-ui.css">
+        <ImageView fx:id="imgTopInfo" preserveRatio="true" fitHeight="63"/>
+        <HBox spacing="20" maxWidth="-Infinity" maxHeight="-Infinity" fx:id="infoBox">
+            <padding>
+                <Insets left="20"/>
+            </padding>
+            <HBox>
+                <HBox fx:id="descInfo" spacing="20">
+                    <HBox maxWidth="-Infinity" maxHeight="-Infinity" spacing="10">
+                        <Label text="50.000 $" prefWidth="200" fx:id="lbMoney" alignment="CENTER"/>
+                    </HBox>
+                    <HBox maxWidth="-Infinity" maxHeight="-Infinity" spacing="10">
+                        <Label text="0" prefWidth="200" fx:id="lbVisitor" alignment="CENTER">
+                            <graphic>
+                                <ImageView fx:id="imgVisitor" fitHeight="20" preserveRatio="true"/>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip text="NOMBRE DE VISITEURS" showDelay="0.8s"/>
+                            </tooltip>
+                        </Label>
+                    </HBox>
+                </HBox>
+                <Label text="00:00" fx:id="lbTime" alignment="CENTER">
+                    <tooltip>
+                        <Tooltip text="HEURE DU JOUR" showDelay="0.8s"/>
+                    </tooltip>
+                </Label>
+            </HBox>
+        </HBox>
+    </StackPane>
+
+    <StackPane fx:id="boxBottomButton" maxWidth="-Infinity" maxHeight="-Infinity"
+               stylesheets="@../css/game-ui.css">
+        <ImageView fx:id="imgBottomButton" preserveRatio="true" fitHeight="80"/>
+        <HBox spacing="40" maxWidth="-Infinity" maxHeight="-Infinity">
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgRoad" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="CHEMIN" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgAnimals" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="ENCLOT" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgBuild" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="MAGASIN" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgFlash" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="ELECTRECITE" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgWater" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="EAU" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <Button prefWidth="90" prefHeight="60">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0"/>
+                </padding>
+                <graphic>
+                    <ImageView fx:id="imgTree" preserveRatio="true" fitWidth="30"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="DECORATION" showDelay="0.8s"/>
+                </tooltip>
+            </Button>
+            <HBox>
+                <padding>
+                    <Insets right="60" left="80"/>
+                </padding>
+                <Button prefWidth="90" prefHeight="60">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgEscavator" preserveRatio="true" fitWidth="45"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="DEMOLIR" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+            </HBox>
+        </HBox>
+    </StackPane>
+
     <StackPane maxWidth="${imgBackgroundOption.fitWidth}" maxHeight="${imgBackgroundOption.fitHeight}"
                stylesheets="@../css/button-menu.css">
         <ImageView fx:id="imgBackgroundOption" preserveRatio="true" fitWidth="100"/>
