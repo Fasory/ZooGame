@@ -1,0 +1,83 @@
+
+/* orange : 255,156,47    vert : 146,208,80     jauve : 255,200,0 */
+
+#desc {
+    -fx-text-fill: rgb(146,208,80);
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 40;
+}
+
+#desc > .text{
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+/* Background color of the whole context menu */
+.choice-box .context-menu {
+    -fx-background-color: rgb(112,51,4); /* bois foncé */
+}
+/* Focused item background color in the list */
+.choice-box .menu-item:focused {
+    -fx-background-color: rgb(242,171,65); /* bois clair */
+}
+/* Text color of non-focused items in the list */
+.choice-box .menu-item > .label {
+    -fx-text-fill: rgb(242,171,65);
+}
+
+/* Text color of focused item in the list */
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: rgb(112,51,4); /* bois foncé */
+}
+
+.choice-box .label {
+    -fx-text-fill: rgb(242,171,65);
+}
+
+/* Background color of the control itself */
+.choice-box {
+    -fx-background-color: rgb(112,51,4);
+    -fx-mark-color: rgb(242,171,65); /* bois clair */
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 35;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 50;
+    -fx-text-fill: rgb(146,208,80);
+}
+
+.button>.text {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+}
+
+.button:hover {
+    -fx-text-fill: rgb(255,200,0);
+}
+
+.button:armed {
+    -fx-text-fill: rgb(255,156,47);
+}
+
+.tooltip {
+    -fx-font-size: 20;
+    -fx-spacing: 10;
+    -fx-text-fill: rgb(255,255,255);
+}
+
+#imgOption {
+    -fx-image: url('../img/roue_crantee_vert.png');
+}
+
+.button:hover > #imgOption {
+    -fx-image: url('../img/roue_crantee_jaune.png');
+}
+
+.button:armed > #imgOption {
+    -fx-image: url('../img/roue_crantee_orange.png');
+}

@@ -1,0 +1,46 @@
+#mainBox .text-field {
+    -fx-background-color: white;
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 30;
+    -fx-text-fill: rgb(242,171,65);
+}
+
+#mainBox {
+    -fx-background-color: rgb(112,51,4);
+    -fx-background-radius: 25px;
+    -fx-border-radius: 22px;
+    -fx-border-color: rgb(242,171,65);
+    -fx-border-width: 5px;
+}
+
+#mainBox .label {
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 30;
+    -fx-text-fill: rgb(242,171,65);
+}
+
+#mainBox .check-box {
+    -fx-font-family: "Tytoon Mist";
+    -fx-font-size: 30;
+    -fx-text-fill: rgb(242,171,65);
+}
+
+#mainBox .check-box .box {
+    -fx-background-color: rgb(112,51,4);
+    -fx-border-color: rgb(242,171,65);
+    -fx-border-radius: 3px;
+    -fx-border-width: 2px;
+
+}
+
+#mainBox .check-box .mark {
+    -fx-font-size: 10;
+}
+
+#mainBox .check-box:selected .mark {
+    -fx-background-color: rgb(112,51,4);
+}
+
+#mainBox .check-box:selected .box {
+    -fx-background-color: rgb(242,171,65);
+}

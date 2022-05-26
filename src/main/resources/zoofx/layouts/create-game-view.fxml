@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="zoofx.createGameMenu.CreateGameController"
+           alignment="TOP_RIGHT">
+    <ImageView fx:id="imgBackground" cache="true" smooth="true" preserveRatio="true"/>
+    <VBox alignment="TOP_CENTER" spacing="70" stylesheets="@../css/load-game-menu.css">
+        <padding>
+            <Insets top="70"/>
+        </padding>
+        <Label fx:id="title" text="NOUVELLE PARTIE"/>
+    </VBox>
+    <VBox fx:id="mainBox" alignment="CENTER" stylesheets="@../css/create-game-menu.css"
+          maxWidth="-Infinity" maxHeight="-Infinity" spacing="20">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+        <HBox>
+            <Label text="NOM DU ZOO :"/>
+            <TextField/>
+        </HBox>
+        <HBox>
+            <Label text="DIFFICULTE :"/>
+        </HBox>
+        <HBox spacing="100">
+            <CheckBox text="TURORIEL" selected="true"/>
+            <CheckBox text="MODE BAC A SABLE"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="boxBack" maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}">
+        <padding>
+            <Insets bottom="50"/>
+        </padding>
+        <StackPane maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}"
+                   stylesheets="@../css/button-menu.css">
+            <ImageView fx:id="imgBack" cache="true" smooth="true" preserveRatio="true" fitWidth="350"/>
+            <Button fx:id="btnBack" text="Retour" prefWidth="Infinity" prefHeight="Infinity"
+                    onAction="#onBackClick"/>
+        </StackPane>
+    </VBox>
+    <StackPane maxWidth="${imgBackgroundOption.fitWidth}" maxHeight="${imgBackgroundOption.fitHeight}"
+               stylesheets="@../css/button-menu.css">
+        <ImageView fx:id="imgBackgroundOption" preserveRatio="true" fitWidth="100"/>
+        <Button onAction="#onOptionClick">
+            <padding>
+                <Insets bottom="0" left="0" right="0" top="0"/>
+            </padding>
+            <graphic>
+                <ImageView fx:id="imgOption" preserveRatio="true" fitWidth="40"/>
+            </graphic>
+            <tooltip>
+                <Tooltip text="OPTION" showDelay="0s"/>
+            </tooltip>
+        </Button>
+    </StackPane>
+</StackPane>

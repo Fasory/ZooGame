@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="zoofx.optionMenu.OptionController"
+           stylesheets="@../css/button-menu.css"
+           alignment="TOP_RIGHT">
+    <ImageView fx:id="imgBackground" cache="true" smooth="true" preserveRatio="true"/>
+    <VBox alignment="CENTER" spacing="50.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <ImageView fx:id="imgTitleScreen" cache="true" smooth="true" preserveRatio="true" fitWidth="700"/>
+        <HBox alignment="CENTER" spacing="50.0">
+            <Label fx:id="desc" text="Resolution :"></Label>
+            <ChoiceBox value="1600 x 900" fx:id="cbResolution" maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1600 x 900"/>
+                        <String fx:value="Fullscreen"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+        </HBox>
+    </VBox>
+    <VBox fx:id="boxBack"  maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}">
+        <padding>
+            <Insets bottom="50"/>
+        </padding>
+        <StackPane maxWidth="${imgBack.fitWidth}" maxHeight="${imgBack.fitHeight}"
+                   stylesheets="@../css/button-menu.css">
+            <ImageView fx:id="imgBack" cache="true" smooth="true" preserveRatio="true" fitWidth="350"/>
+            <Button fx:id="btnBack" text="Retour" prefWidth="Infinity" prefHeight="Infinity"
+                    onAction="#onBackClick"/>
+        </StackPane>
+    </VBox>
+</StackPane>

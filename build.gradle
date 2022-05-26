@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.ihm.zoofx'
-    mainClass = 'com.ihm.zoofx.ZooGame'
+    mainModule = 'zoofx'
+    mainClass = 'zoofx.ZooGame'
 }
 
 javafx {

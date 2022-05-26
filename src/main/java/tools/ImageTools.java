@@ -1,4 +1,4 @@
-package com.ihm.tools;
+package tools;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
