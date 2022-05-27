@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -46,95 +43,114 @@
             </HBox>
         </HBox>
     </StackPane>
-
-    <StackPane fx:id="boxBottomButton" maxWidth="-Infinity" maxHeight="-Infinity"
-               stylesheets="@../css/game-ui.css">
-        <ImageView fx:id="imgBottomButton" preserveRatio="true" fitHeight="80"/>
-        <HBox spacing="40" maxWidth="-Infinity" maxHeight="-Infinity">
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgRoad" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="CHEMIN" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgAnimals" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="ENCLOT" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgBuild" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="MAGASIN" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgFlash" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="ELECTRECITE" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgWater" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="EAU" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <Button prefWidth="90" prefHeight="60">
-                <padding>
-                    <Insets bottom="0" left="0" right="0" top="0"/>
-                </padding>
-                <graphic>
-                    <ImageView fx:id="imgTree" preserveRatio="true" fitWidth="30"/>
-                </graphic>
-                <tooltip>
-                    <Tooltip text="DECORATION" showDelay="0.8s"/>
-                </tooltip>
-            </Button>
-            <HBox>
-                <padding>
-                    <Insets right="60" left="80"/>
-                </padding>
-                <Button prefWidth="90" prefHeight="60">
+    <VBox fx:id="boxBottomButton" maxWidth="-Infinity" maxHeight="-Infinity"
+          stylesheets="@../css/game-ui.css" alignment="BOTTOM_RIGHT">
+        <BorderPane fx:id="boxSelectBuild" visible="false">
+            <padding>
+                <Insets top="10" bottom="10" right="30" left="30"/>
+            </padding>
+            <left>
+                <HBox alignment="CENTER">
+                    <Button fx:id="btnLeftSelectBuild" prefHeight="50" visible="false" onAction="#onSwitchLeftClick"/>
+                </HBox>
+            </left>
+            <center>
+                <HBox fx:id="menuSelectBuild" alignment="CENTER" spacing="50"/>
+            </center>
+            <right>
+                <HBox alignment="CENTER">
+                    <Button fx:id="btnRightSelectBuild" prefHeight="50" visible="false" onAction="#onSwitchRightClick"/>
+                </HBox>
+            </right>
+        </BorderPane>
+        <StackPane fx:id="boxButtonBuild">
+            <ImageView fx:id="imgBottomButton" preserveRatio="true" fitHeight="80"/>
+            <HBox spacing="40" maxWidth="-Infinity" maxHeight="-Infinity">
+                <Button prefWidth="90" prefHeight="60" onAction="#onWayClick">
                     <padding>
                         <Insets bottom="0" left="0" right="0" top="0"/>
                     </padding>
                     <graphic>
-                        <ImageView fx:id="imgEscavator" preserveRatio="true" fitWidth="45"/>
+                        <ImageView fx:id="imgRoad" preserveRatio="true" fitWidth="30"/>
                     </graphic>
                     <tooltip>
-                        <Tooltip text="DEMOLIR" showDelay="0.8s"/>
+                        <Tooltip text="CHEMIN" showDelay="0.8s"/>
                     </tooltip>
                 </Button>
+                <Button prefWidth="90" prefHeight="60" onAction="#onAnimalsClick">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgAnimals" preserveRatio="true" fitWidth="30"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="ENCLOS" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+                <Button prefWidth="90" prefHeight="60" onAction="#onBuildClick">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgBuild" preserveRatio="true" fitWidth="30"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="MAGASIN" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+                <Button prefWidth="90" prefHeight="60" onAction="#onFlashClick">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgFlash" preserveRatio="true" fitWidth="30"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="ELECTRECITE" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+                <Button prefWidth="90" prefHeight="60" onAction="#onWaterClick">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgWater" preserveRatio="true" fitWidth="30"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="EAU" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+                <Button prefWidth="90" prefHeight="60" onAction="#onTreeClick">
+                    <padding>
+                        <Insets bottom="0" left="0" right="0" top="0"/>
+                    </padding>
+                    <graphic>
+                        <ImageView fx:id="imgTree" preserveRatio="true" fitWidth="30"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="DECORATION" showDelay="0.8s"/>
+                    </tooltip>
+                </Button>
+                <HBox>
+                    <padding>
+                        <Insets right="60" left="80"/>
+                    </padding>
+                    <Button prefWidth="90" prefHeight="60" onAction="#onEscavatorClick">
+                        <padding>
+                            <Insets bottom="0" left="0" right="0" top="0"/>
+                        </padding>
+                        <graphic>
+                            <ImageView fx:id="imgEscavator" preserveRatio="true" fitWidth="45"/>
+                        </graphic>
+                        <tooltip>
+                            <Tooltip text="DEMOLIR" showDelay="0.8s"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
             </HBox>
-        </HBox>
-    </StackPane>
+        </StackPane>
+    </VBox>
 
     <StackPane maxWidth="${imgBackgroundOption.fitWidth}" maxHeight="${imgBackgroundOption.fitHeight}"
                stylesheets="@../css/button-menu.css">

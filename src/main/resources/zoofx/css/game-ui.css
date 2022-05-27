@@ -24,24 +24,75 @@
 #boxTopInfo #descInfo .label {
     -fx-background-color: rgb(112,51,4);
     -fx-background-radius: 100px;
-    -fx-text-fill: rgb(146,208,80);
     -fx-font-family: "Tytoon Mist";
     -fx-font-size: 25;
+    -fx-text-fill: rgb(146,208,80);
     -fx-padding: 10 50 10 50;
 }
 
-#boxBottomButton .button {
+#boxSelectBuild .toggle-button {
+    -fx-background-color: rgb(242,171,65);
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10 10 10 10;
+}
+
+#boxSelectBuild .toggle-button:selected {
+    -fx-border-color: rgb(146,208,80);
+    -fx-background-color: rgb(232,161,55);
+}
+
+#boxSelectBuild .toggle-button .label {
+    -fx-text-fill:  rgb(112,51,4);
+}
+
+#boxSelectBuild .toggle-button *.separator .line {
+    -fx-background-color: rgb(112,51,4);
+    -fx-pref-height: 2;
+    -fx-border-color: null ;
+}
+
+#boxSelectBuild {
+    -fx-background-color: rgb(112,51,4);
+    -fx-background-radius: 10 0 0 0;
+    -fx-border-radius: 10 0 0 0;
+    -fx-border-width: 2px;
+    -fx-border-color: rgb(242,171,65);
+}
+
+#boxSelectBuild .button {
+    -fx-background-color: rgb(146,208,80);
+}
+
+#boxSelectBuild .button:hover {
+    -fx-background-color: rgb(255,200,0);
+}
+
+#boxSelectBuild .button:armed {
+    -fx-background-color: rgb(255,156,47);
+}
+
+#btnLeftSelectBuild {
+    -fx-shape:  "M 0,75 15,0 15,150 z";
+}
+
+#btnRightSelectBuild {
+    -fx-shape:  "M 15,75 0,0 0,150 z";
+}
+
+#boxButtonBuild .button {
     -fx-background-color: rgb(112,51,4);
     -fx-background-radius: 100px;
 }
 
-#boxBottomButton .button:hover {
+#boxButtonBuild .button:hover {
     -fx-border-radius: 100px;
     -fx-border-width: 2px;
     -fx-border-color: rgb(255,200,0);
 }
 
-#boxBottomButton .button:armed {
+#boxButtonBuild .button:armed {
     -fx-border-radius: 100px;
     -fx-border-width: 2px;
     -fx-border-color: rgb(255,156,47);
